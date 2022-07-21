@@ -1,13 +1,26 @@
+import {useState} from 'react'
 import {auth} from 'stores'
 import {useNavigationActions} from './useNavigationActions'
 
 export function useAuth() {
+  const [isFetching, setIsFetching] = useState(false)
   const {replaceTo} = useNavigationActions()
   const isAuth = auth.isAuth
 
-  function login() {
-    auth.login()
-    replaceTo('main')
+  function login({password}: {login: string; password: string}) {
+    setIsFetching(true)
+    return new Promise<boolean>((resolve, reject) => {
+      setTimeout(() => {
+        if (password.toLowerCase() === 'admin') {
+          resolve(true)
+          auth.login()
+          replaceTo('main')
+        } else {
+          reject()
+        }
+        setIsFetching(false)
+      }, 1000)
+    })
   }
 
   function logout() {
@@ -15,5 +28,5 @@ export function useAuth() {
     replaceTo('welcome')
   }
 
-  return {isAuth, login, logout}
+  return {isAuth, login, logout, isFetching}
 }
