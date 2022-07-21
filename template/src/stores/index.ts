@@ -1,7 +1,6 @@
 import {spy} from 'mobx'
 import {createMobxDebugger} from 'mobx-flipper'
 
-import '../app/storage'
 import {auth} from './auth'
 
 // store debugging

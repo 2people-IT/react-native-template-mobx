@@ -1,13 +1,15 @@
 import React from 'react'
-import {View, Button} from 'react-native'
+import * as UI from 'shared/ui'
 import {s} from 'shared/phrases'
 import {useAuth} from 'hooks'
 
 export const Login = () => {
   const {login} = useAuth()
   return (
-    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Button title={s.login} onPress={login} />
-    </View>
+    <UI.Layout justify="center" align="center">
+      <UI.DefaultInput placeholder="Login" />
+      <UI.DefaultInput placeholder="Password" />
+      <UI.Button title={s.login} onPress={login} />
+    </UI.Layout>
   )
 }

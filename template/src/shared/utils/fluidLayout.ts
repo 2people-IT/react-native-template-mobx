@@ -5,8 +5,8 @@ const {width, height} = Dimensions.get('window')
 const config = {
   minWidth: 320,
   maxWidth: 390,
-  minHeight: 500,
-  maxHeight: 700,
+  minHeight: 533,
+  maxHeight: 834,
 }
 
 interface Constraint {

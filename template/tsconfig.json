@@ -24,6 +24,8 @@
           "validProperties": [
             "include-font-padding",
             "text-align-vertical",
+            "padding-horizontal",
+            "padding-vertical"
           ]
         }
       }

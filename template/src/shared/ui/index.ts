@@ -1,2 +1,5 @@
 export * from './Font'
 export * from './Spacer'
+export * from './Inputs'
+export * from './Layout'
+export * from './Buttons'

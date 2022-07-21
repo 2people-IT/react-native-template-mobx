@@ -41,6 +41,7 @@ export const spaces = {
 
 export const colors = {
   backgroundDefault: pallete.white,
+  textLight: pallete.white,
   // navigation
   primary: pallete.azureRadiance,
   background: pallete.concrete,
