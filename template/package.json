@@ -43,10 +43,10 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
-    "@babel/core": "7.18.9",
+    "@babel/core": "7.18.10",
     "@babel/runtime": "7.18.9",
     "@react-native-community/eslint-config": "2.0.0",
-    "@types/compose-function": "^0.0.30",
+    "@types/compose-function": "0.0.30",
     "@types/jest": "26.0.23",
     "@types/react-native": "0.67.3",
     "@types/react-test-renderer": "17.0.1",
