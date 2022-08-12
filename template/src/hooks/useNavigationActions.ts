@@ -30,5 +30,14 @@ export function useNavigationActions() {
   function replaceTo(name: AppNavigation.Navigators) {
     navigation.dispatch(StackActions.replace(name))
   }
-  return {resetMain, replaceTo}
+
+  function goTo(name: any) {
+    navigation.navigate(name)
+  }
+
+  function pop() {
+    navigation.goBack()
+  }
+
+  return {resetMain, replaceTo, goTo, pop}
 }

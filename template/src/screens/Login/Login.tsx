@@ -1,5 +1,4 @@
 import React from 'react'
-import {Alert} from 'react-native'
 import * as UI from 'shared/ui'
 import {s} from 'shared/phrases'
 import {useAuth} from 'hooks'
@@ -17,8 +16,8 @@ const initialValues: AuthField = {
 }
 
 const validationSchema = yup.object().shape({
-  login: yup.string().required('Login is required'),
-  password: yup.string().required('Password is required'),
+  // login: yup.string().required('Login is required'),
+  // password: yup.string().required('Password is required'),
 })
 
 export const Login = () => {
@@ -34,7 +33,6 @@ export const Login = () => {
       await login(values)
     } catch {
       // action.setErrors()
-      Alert.alert('', 'Wrong password')
     }
   }
 
@@ -57,7 +55,6 @@ export const Login = () => {
         title={s.login}
         onPress={formik.handleSubmit}
       />
-      <UI.Font>{'Pass: admin'}</UI.Font>
     </UI.Layout>
   )
 }

@@ -11,13 +11,9 @@ export function useAuth() {
     setIsFetching(true)
     return new Promise<boolean>((resolve, reject) => {
       setTimeout(() => {
-        if (password.toLowerCase() === 'admin') {
-          resolve(true)
-          auth.login()
-          replaceTo('main')
-        } else {
-          reject()
-        }
+        resolve(true)
+        auth.login()
+        replaceTo('main')
         setIsFetching(false)
       }, 1000)
     })
