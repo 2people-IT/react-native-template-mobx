@@ -1,7 +1,7 @@
 export const s = {
   login: 'Войти',
   exit: 'Выйти',
-  home: 'Главаня',
+  home: 'Главная',
   settings: 'Настройки',
   welcome: 'Добро пожаловать',
 }
